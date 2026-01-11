@@ -1,0 +1,25 @@
+:root {
+  --spacing-1300: 104;
+  --spacing-1100: 88;
+  --spacing-1000: 80;
+  --spacing-800: 64;
+  --spacing-700: 56;
+  --spacing-500: 40;
+  --spacing-400: 32;
+  --spacing-300: 24;
+  --spacing-200: 16;
+  --spacing-100: 8;
+  --spacing-50: 4;
+  --color-green: #54e6af;
+  --color-blue-950: #121725;
+  --color-blue-900: #2c344b;
+  --color-blue-600: #5a668a;
+  --color-blue-300: #c2cbe5;
+  --color-white: #ffffff;
+  --color-red: #fb3e3e;
+  --font-size-desktop-text-preset-1: 48;
+  --font-size-mobile-text-preset-1: 32;
+  --font-size-mobile-text-preset-2: 14;
+  --font-size-desktop-text-preset-2: 18;
+  --font-size-desktop-text-preset-3: 14;
+}
