@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <title>Pod request access landing page</title>
+
+    <script defer src="js/scripts.js"></script>
   </head>
   <body>
     <main>
@@ -31,7 +33,7 @@
           </div>
           <div class="bottom-content">
             <div class="form-container">
-              <form id="form" class="">
+              <form id="form" action="/" class="">
                 <input
                   type="email"
                   name="email"
@@ -40,7 +42,7 @@
                 />
                 <input type="submit" value="Request Access" />
               </form>
-              <p id="error-msg">Oops! Please add your email</p>
+              <p id="error-msg"></p>
             </div>
             <div class="logos">
               <img src="assets/desktop/spotify.svg" alt="spotify logo" />
@@ -64,7 +66,5 @@
         </div>
       </section>
     </main>
-
-    <script src="js/scripts.js"></script>
   </body>
 </html>

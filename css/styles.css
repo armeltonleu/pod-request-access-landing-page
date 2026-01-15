@@ -130,6 +130,9 @@ main {
 .form-container form.error {
   border: 2px solid var(--color-red);
 }
+.form-container form.success {
+  border: 2px solid var(--color-green);
+}
 .form-container #error-msg {
   display: none;
   color: var(--color-red);
