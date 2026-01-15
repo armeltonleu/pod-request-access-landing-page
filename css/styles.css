@@ -36,6 +36,7 @@ body {
 main {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +97,7 @@ main {
   padding: var(--spacing-50);
   background-color: var(--color-blue-900);
   max-width: 448px;
-  transition: border 0.2s ease;
+  transition: border 0.8s ease-in-out;
 }
 .form-container input[type="email"] {
   background-color: transparent;
@@ -134,12 +135,14 @@ main {
   border: 2px solid var(--color-green);
 }
 .form-container #error-msg {
-  display: none;
+  /* display: none; */
+  height: 0;
+  opacity: 0;
   color: var(--color-red);
   font-weight: 700;
   font-size: 12px;
   margin: var(--spacing-100) 0 0 var(--spacing-300);
-  transition: display 0.2s ease;
+  transition: all 0.8s ease-in-out;
 }
 .logos {
   display: flex;
@@ -155,6 +158,18 @@ main {
   grid-row: 1/5;
   position: relative;
 }
+.hero-img .dots {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  z-index: 2;
+}
 .logos {
   display: flex;
+  align-items: center;
+}
+.google {
+  max-width: 125px;
+  height: auto;
 }
