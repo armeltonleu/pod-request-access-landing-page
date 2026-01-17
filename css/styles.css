@@ -130,11 +130,11 @@ main {
   color: var(--color-blue-950);
   border: none;
 }
-.form-container form.error {
-  border: 2px solid var(--color-red);
+.error {
+  border: 2px solid var(--color-red) !important;
 }
-.form-container form.success {
-  border: 2px solid var(--color-green);
+.success {
+  border: 2px solid var(--color-green) !important;
 }
 .form-container #error-msg {
   /* display: none; */
@@ -262,6 +262,9 @@ main {
   }
   .form-container form input[type="submit"] {
     width: 100%;
+  }
+  .form-container #error-msg {
+    display: none;
   }
   .logos {
     max-width: 100%;

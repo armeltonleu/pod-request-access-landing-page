@@ -3,16 +3,24 @@ const email = document.getElementById("email");
 const errorMsg = document.getElementById("error-msg");
 const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const mediaQuery = window.matchMedia("(max-width: 480px)");
+let errorBlock;
+if (mediaQuery.matches) {
+  errorBlock = email;
+} else {
+  errorBlock = form;
+}
+
 function formError(msg) {
-  form.classList.remove("success");
-  form.classList.add("error");
+  errorBlock.classList.remove("success");
+  errorBlock.classList.add("error");
   errorMsg.style.height = "100%";
   errorMsg.style.opacity = "1";
   errorMsg.textContent = msg;
 }
 function formSuccess() {
-  form.classList.remove("error");
-  form.classList.add("success");
+  errorBlock.classList.remove("error");
+  errorBlock.classList.add("success");
   errorMsg.style.height = "0";
   errorMsg.style.opacity = "0";
 }
