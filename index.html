@@ -39,6 +39,8 @@
                   name="email"
                   id="email"
                   placeholder="Email address"
+                  aria-invalid="true"
+                  aria-errormessage="email-error"
                 />
                 <input type="submit" value="Request Access" />
               </form>
@@ -69,7 +71,17 @@
           </div>
         </div>
         <div class="hero-img">
-          <img src="assets/desktop/image-host.jpg" alt="image-host" />
+          <picture>
+            <source
+              srcset="assets/mobile/image-host.jpg"
+              media="(max-width: 480px)"
+            />
+            <source
+              srcset="assets/tablet/image-host.jpg"
+              media="(max-width: 768px)"
+            />
+            <img src="assets/desktop/image-host.jpg" alt="image-host" />
+          </picture>
           <img
             class="dots"
             src="assets/desktop/bg-pattern-dots.svg"
