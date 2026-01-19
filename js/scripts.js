@@ -28,6 +28,7 @@ function formSuccess() {
   errorBlock.classList.add("success");
   errorMsg.style.height = "0";
   errorMsg.style.opacity = "0";
+  errorMsg.textContent = "Form ok";
 }
 
 form.addEventListener("submit", (e) => {

@@ -206,6 +206,7 @@ main {
 .form-container #error-msg {
   height: 0;
   opacity: 0;
+  visibility: hidden;
   color: var(--color-red);
   font-weight: 700;
   font-size: 12px;
