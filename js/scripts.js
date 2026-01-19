@@ -3,10 +3,15 @@ const email = document.getElementById("email");
 const errorMsg = document.getElementById("error-msg");
 const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const logoContainer = document.getElementsByClassName("logo-container");
+const themeSwitcher = document.getElementById("theme-switcher");
+const logo = document.getElementById("logo");
+
 const mediaQuery = window.matchMedia("(max-width: 480px)");
 let errorBlock;
 if (mediaQuery.matches) {
   errorBlock = email;
+  document.body.append(themeSwitcher);
 } else {
   errorBlock = form;
 }
@@ -41,4 +46,23 @@ form.addEventListener("submit", (e) => {
     console.log(emailValue);
     formSuccess();
   }
+});
+
+function imgSwitcher(image, light, dark) {
+  let source = image.getAttribute("src");
+  let title = image.getAttribute("title");
+  if (source.includes(light)) {
+    source = source.replace(light, dark);
+    image.setAttribute("title", "Switch to dark mode");
+  } else {
+    source = source.replace(dark, light);
+    image.setAttribute("title", "Switch to light mode");
+  }
+  image.setAttribute("src", source);
+}
+
+themeSwitcher.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+  imgSwitcher(logo, "logo.svg", "logo-light.svg");
+  imgSwitcher(themeSwitcher, "light.svg", "dark.svg");
 });
