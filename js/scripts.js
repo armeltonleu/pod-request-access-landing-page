@@ -16,7 +16,7 @@ if (mediaQuery.matches) {
   errorBlock = form;
 }
 
-function formError(msg) {
+/* function formError(msg) {
   errorBlock.classList.remove("success");
   errorBlock.classList.add("error");
   errorMsg.style.height = "100%";
@@ -29,6 +29,21 @@ function formSuccess() {
   errorMsg.style.height = "0";
   errorMsg.style.opacity = "0";
   errorMsg.textContent = "Form ok";
+} */
+
+function formError(msg) {
+  errorBlock.classList.remove("success");
+  errorBlock.classList.add("error");
+  errorMsg.classList.remove("hide");
+  errorMsg.classList.add("show");
+  errorMsg.textContent = msg;
+}
+function formSuccess() {
+  errorBlock.classList.remove("error");
+  errorBlock.classList.add("success");
+  errorMsg.classList.remove("show");
+  errorMsg.classList.add("hide");
+  errorMsg.textContent = "Form ok";
 }
 
 form.addEventListener("submit", (e) => {
@@ -36,15 +51,12 @@ form.addEventListener("submit", (e) => {
 
   if (emailValue === "") {
     e.preventDefault();
-    console.log(emailValue);
     formError("Oops! Please add your email");
   } else if (!regex.test(emailValue)) {
     e.preventDefault();
-    console.log(emailValue);
     formError("Oops! Please check your email");
   } else {
     e.preventDefault();
-    console.log(emailValue);
     formSuccess();
   }
 });

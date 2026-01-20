@@ -203,14 +203,25 @@ main {
   border: 2px solid var(--color-green) !important;
 }
 
-.form-container #error-msg {
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
+.show {
+  display: block;
+  height: 100%;
+  opacity: 1;
   color: var(--color-red);
   font-weight: 700;
   font-size: 12px;
   margin: var(--spacing-100) 0 0 var(--spacing-300);
+  transition: all 0.8s ease-in-out;
+}
+.hide {
+  display: none;
+  height: 0;
+  opacity: 0;
+  margin: 0 0 0 var(--spacing-300);
+  transition: all 0.8s ease-in-out;
+}
+
+.form-container #error-msg {
   transition: all 0.8s ease-in-out;
 }
 
