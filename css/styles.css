@@ -148,6 +148,12 @@ main {
   transition: border 0.8s ease-in-out;
 }
 
+.form-container label {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
 .form-container input[type="email"] {
   background-color: transparent;
   color: var(--color-white);
