@@ -144,6 +144,7 @@ main {
   padding: var(--spacing-50);
   background-color: var(--color-blue-900);
   max-width: 448px;
+  margin-bottom: var(--spacing-100);
   transition: border 0.8s ease-in-out;
 }
 
@@ -201,20 +202,21 @@ main {
 
 .success {
   border: 2px solid var(--color-green) !important;
+  margin-bottom: var(--spacing-100);
 }
 
 .show {
-  display: block;
+  visibility: visible;
   height: 100%;
   opacity: 1;
   color: var(--color-red);
   font-weight: 700;
   font-size: 12px;
-  margin: var(--spacing-100) 0 0 var(--spacing-300);
+  margin: 0 0 0 var(--spacing-300);
   transition: all 0.8s ease-in-out;
 }
 .hide {
-  display: none;
+  visibility: hidden;
   height: 0;
   opacity: 0;
   margin: 0 0 0 var(--spacing-300);

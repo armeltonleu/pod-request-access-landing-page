@@ -34,6 +34,7 @@ function formSuccess() {
 function formError(msg) {
   errorBlock.classList.remove("success");
   errorBlock.classList.add("error");
+  email.setAttribute("aria-invalid", "true");
   errorMsg.classList.remove("hide");
   errorMsg.classList.add("show");
   errorMsg.textContent = msg;
@@ -41,6 +42,7 @@ function formError(msg) {
 function formSuccess() {
   errorBlock.classList.remove("error");
   errorBlock.classList.add("success");
+  email.setAttribute("aria-invalid", "false");
   errorMsg.classList.remove("show");
   errorMsg.classList.add("hide");
   errorMsg.textContent = "Form ok";
